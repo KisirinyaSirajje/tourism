@@ -1,18 +1,26 @@
-
-import { useState, useRef } from 'react';
-import EventCard from "./EventCard";
+import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const events = [
-  { name: "Kilimanjaro", image: "/top.jpg" },
-  { name: "Madagascar", image: "/cliff.jpg" },
-  { name: "Cape Town", image: "/walk.jpg" },
-  { name: "Kilimanjaro", image: "/top.jpg" },
-  { name: "Madagascar", image: "/cliff.jpg" },
-  { name: "Cape Town", image: "/walk.jpg" }
+  { name: "Kruger Park", image: "/kruger.jpg" },
+  { name: "Western Cape", image: "/elephant.jpg" },
+  { name: "Addo Park", image: "/giraffe.jpg" },
+  { name: "Masai Mara", image: "/elephant2.jpg" },
+  { name: "Kruger Park", image: "/kruger.jpg" },
+  { name: "Western Cape", image: "/elephant.jpg" }
 ];
 
-const Events = () => {
+const SummerEventCard = ({ event }) => {
+  return (
+    <div className="relative bg-cover bg-center h-64 rounded-lg shadow-lg transition-transform hover:scale-105"
+         style={{ backgroundImage: `url(${event.image})` }}>
+      <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+      <h3 className="absolute bottom-4 left-4 text-white text-xl font-semibold">{event.name}</h3>
+    </div>
+  );
+};
+
+const SummerEvents = () => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -28,8 +36,8 @@ const Events = () => {
 
   return (
     <div className="py-16 px-10 relative">
-      <h2 className="text-3xl font-bold">Highlighted Events</h2>
-      <p className="text-gray-600">Recommended camps by our instructors</p>
+      <h2 className="text-3xl font-bold">Summer Events</h2>
+      <p className="text-gray-600">Join our exciting range of summer activities</p>
       
       <div className="relative mt-8">
         <button 
@@ -44,9 +52,9 @@ const Events = () => {
           className="flex overflow-x-auto gap-6 scroll-smooth scrollbar-hide"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {events.map((event) => (
-            <div key={event.name} className="flex-none w-full md:w-1/3">
-              <EventCard event={event} />
+          {events.map((event, index) => (
+            <div key={index} className="flex-none w-full md:w-1/3">
+              <SummerEventCard event={event} />
             </div>
           ))}
         </div>
@@ -62,5 +70,4 @@ const Events = () => {
   );
 };
 
-export default Events;
-
+export default SummerEvents;

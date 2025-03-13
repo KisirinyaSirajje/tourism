@@ -39,6 +39,8 @@ import Hero from "./components/Hero";
 import Events from "./components/Events";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
+import SummerEvents from "./components/SummerEvents";
+import SnowTreks from "./components/SnowTreks";
 
 function App() {
   return (
@@ -46,7 +48,8 @@ function App() {
       <Navbar />
       <Hero />
       <Events />
-      <Events />
+      <SnowTreks/>
+      <SummerEvents/>
       <Testimonial />
       <Footer />
     </div>
