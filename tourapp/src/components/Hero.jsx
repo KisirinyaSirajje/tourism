@@ -1,17 +1,3 @@
-// const Hero = () => {
-//     return (
-//       <div className="relative h-screen bg-cover bg-center flex items-center text-white"
-//            style={{ backgroundImage: "url('boat.jpg')" }}>
-//         <div className="absolute inset-0 bg-black opacity-40"></div>
-//         <div className="relative z-10 px-10">
-//           <h1 className="text-5xl font-bold">Experience Nature</h1>
-//           <p className="mt-4 text-lg">India’s Largest Trekking Organization</p>
-//         </div>
-//       </div>
-//     );
-//   };
-  
-//   export default Hero;
 
 import { FaUsers, FaHandsHelping, FaCalendarAlt, FaClock } from 'react-icons/fa';
 

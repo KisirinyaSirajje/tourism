@@ -5,6 +5,8 @@ import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
 import SummerEvents from "../components/SummerEvents";
 import SnowTreks from "../components/SnowTreks";
+import VideoGallery from "../components/VideoGallery";
+
 
 const LandingPage = () => {
   return (
@@ -14,6 +16,7 @@ const LandingPage = () => {
       <Events />
       <SnowTreks />
       <SummerEvents />
+      <VideoGallery />
       <Testimonial />
       <Footer />
     </>

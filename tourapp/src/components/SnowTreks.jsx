@@ -33,6 +33,7 @@ const SnowTreks = () => {
       });
     }
   };
+  
 
   return (
     <div className="py-16 px-10 relative">

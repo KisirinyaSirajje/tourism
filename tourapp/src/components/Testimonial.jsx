@@ -18,7 +18,7 @@ const Testimonial = () => {
 
       <div className="flex flex-col md:flex-row mt-6 space-y-6 md:space-y-0 md:space-x-10">
         {/* Left side - Reviewers */}
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3">*
           <div className="border rounded-lg p-4 shadow-lg bg-white hover:shadow-xl transition-shadow">
             {reviews.map((person, index) => (
               <div 
