@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import SummerEvents from "../components/SummerEvents";
 import SnowTreks from "../components/SnowTreks";
 import VideoGallery from "../components/VideoGallery";
+import EpicAdventures from "../components/EpicAdventures";
 
 
 const LandingPage = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
       <Events />
       <SnowTreks />
       <SummerEvents />
+      <EpicAdventures />
       <VideoGallery />
       <Testimonial />
       <Footer />
