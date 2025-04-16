@@ -52,7 +52,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import AccessPage from "./pages/AccessPage";
 import ProfilePage from "./pages/ProfilePage";
-
+import EventDetailsPage from "./pages/EventDetailsPage";
 import TermsConditionsPage from "./pages/TermsAndConditions";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import PrivateRoute from "./components/PrivateRoute";
@@ -68,6 +68,7 @@ function App() {
           <Route path="/access" element={<AccessPage />} />
           <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/event/:id" element={<EventDetailsPage />} />
 
           {/* Protected Routes */}
           <Route
