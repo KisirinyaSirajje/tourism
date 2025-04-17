@@ -1,12 +1,13 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Events from "../components/Events";
+import HighlightedEvents from "../components/HighlightedEvents";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
 import SummerEvents from "../components/SummerEvents";
-import SnowTreks from "../components/SnowTreks";
 import VideoGallery from "../components/VideoGallery";
 import EpicAdventures from "../components/EpicAdventures";
+import SpecialEvents from "../components/SpecialEvents";
+import SnowTreksEvents from "../components/SnowTreksEvents";
 
 
 const LandingPage = () => {
@@ -14,10 +15,11 @@ const LandingPage = () => {
     <>
       <Navbar />
       <Hero />
-      <Events />
-      <SnowTreks />
+      <HighlightedEvents />
+      <SnowTreksEvents />
       <SummerEvents />
       <EpicAdventures />
+      <SpecialEvents />
       <VideoGallery />
       <Testimonial />
       <Footer />

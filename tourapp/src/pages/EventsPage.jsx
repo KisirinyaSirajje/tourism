@@ -1,6 +1,8 @@
 
+
 // import { useState, useEffect } from "react";
 // import { FaSearch } from "react-icons/fa";
+// import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 // import { fetchAllEvents } from "../services/api";
@@ -11,6 +13,7 @@
 //   const [events, setEvents] = useState([]);
 //   const [isLoading, setIsLoading] = useState(true);
 //   const [error, setError] = useState(null);
+//   const navigate = useNavigate(); // Initialize navigate
   
 //   // Fetch all events data from API
 //   useEffect(() => {
@@ -84,7 +87,7 @@
 //       event.duration, 
 //       event.calendarDates,
 //       event.price,
-//       event.category // Also search by category
+//       event.category
 //     ];
     
 //     return searchFields.some(field => 
@@ -94,6 +97,11 @@
   
 //   const handleLoadMore = () => {
 //     setVisibleEvents(prev => Math.min(prev + 6, filteredEvents.length));
+//   };
+
+//   // Handle click on event card to navigate to details page
+//   const handleEventClick = (event) => {
+//     navigate(`/events/${event.id}`);
 //   };
 
 //   return (
@@ -145,7 +153,11 @@
 //             {/* Events Grid */}
 //             <section className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto">
 //               {filteredEvents.slice(0, visibleEvents).map((event, index) => (
-//                 <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+//                 <div 
+//                   key={index} 
+//                   className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+//                   onClick={() => handleEventClick(event)}
+//                 >
 //                   {event.category && (
 //                     <div className="absolute top-2 right-2 bg-[#DD501DE8] text-white text-xs px-2 py-1 rounded-full">
 //                       {event.category.replace(/([A-Z])/g, ' $1').trim()}
@@ -239,7 +251,6 @@
 
 // export default EventsPage;
 
-
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate
@@ -320,17 +331,17 @@ const EventsPage = () => {
   // Handle different data structures in the search
   const filteredEvents = events.filter(event => {
     const searchFields = [
-      event.title, 
+      event.title,
       event.heading,
-      event.description, 
+      event.description,
       event.about,
-      event.duration, 
+      event.duration,
       event.calendarDates,
       event.price,
       event.category
     ];
     
-    return searchFields.some(field => 
+    return searchFields.some(field =>
       field && field.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
@@ -341,7 +352,7 @@ const EventsPage = () => {
 
   // Handle click on event card to navigate to details page
   const handleEventClick = (event) => {
-    navigate(`/events/${event.id}`);
+    navigate(`/event/${event.id}`);
   };
 
   return (
@@ -393,8 +404,8 @@ const EventsPage = () => {
             {/* Events Grid */}
             <section className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto">
               {filteredEvents.slice(0, visibleEvents).map((event, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                   onClick={() => handleEventClick(event)}
                 >
