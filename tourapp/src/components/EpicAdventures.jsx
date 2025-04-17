@@ -133,17 +133,7 @@ const EpicAdventures = () => {
           )}
         </div>
         
-        {/* Add some additional info about epic adventures */}
-        {!isLoading && !error && adventures.length > 0 && (
-          <div className="mt-12 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-            <h3 className="text-xl font-semibold mb-2">What makes these adventures epic?</h3>
-            <p className="text-gray-600">
-              Our epic adventures take you to the most extreme and unique destinations on the planet.
-              From scorching deserts to remote rivers, these journeys are designed for travelers
-              seeking extraordinary experiences in the world's most challenging environments.
-            </p>
-          </div>
-        )}
+        
       </div>
     </div>
   );
