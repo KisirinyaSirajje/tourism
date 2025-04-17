@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // Get the API base URL from environment variables
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://54.210.95.246:3005/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://sample-project-api.chordifyed.com/api/v1';
 
 // Create an axios instance with the base URL
 const apiClient = axios.create({
